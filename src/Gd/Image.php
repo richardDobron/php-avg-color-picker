@@ -30,7 +30,7 @@ class Image
     /**
      * Image constructor.
      *
-     * @param resource $resource
+     * @param \GdImage $resource
      * @param bool $cleanupOnDestruct
      */
     protected function __construct($resource, bool $cleanupOnDestruct = true)
@@ -58,7 +58,7 @@ class Image
      */
     protected function assertResource($resource)
     {
-        if (!is_resource($resource) || get_resource_type($resource) !== 'gd') {
+        if (!$resource instanceof \GdImage) {
             throw new InvalidArgumentException('Invalid resource type.');
         }
 
@@ -74,7 +74,7 @@ class Image
     /**
      * Create an image from the resource.
      *
-     * @param resource $resource
+     * @param \GdImage $resource
      * @return $this
      */
     public static function createFromResource($resource)
@@ -88,8 +88,12 @@ class Image
      * @param string $path
      * @return $this
      */
-    public static function createFromPath(string $path)
+    public static function createFromPath(string $path): static
     {
+        if (!is_file($path)) {
+            throw new InvalidArgumentException("File does not exist: $path");
+        }
+
         $createFunctions = [
             'image/png' => 'imagecreatefrompng',
             'image/jpeg' => 'imagecreatefromjpeg',

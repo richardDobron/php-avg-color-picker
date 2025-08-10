@@ -8,7 +8,7 @@ use Dobron\AvgColorPicker\ColorConverter;
 class ColorConverterUnitTest extends UnitTestCase
 {
     /**
-     * @dataProvider testValidColorsProvider
+     * @dataProvider validColorsProvider
      * @param string $hex
      * @param array $rgb
      */
@@ -18,7 +18,7 @@ class ColorConverterUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidColorsProvider
+     * @dataProvider validColorsProvider
      * @param string $hex
      * @param array $rgb
      */
@@ -28,7 +28,7 @@ class ColorConverterUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testInvalidHexProvider
+     * @dataProvider invalidHexProvider
      * @param string $hex
      */
     public function testHex2RgbFromInvalidValue(string $hex)
@@ -39,7 +39,7 @@ class ColorConverterUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testInvalidRgbProvider
+     * @dataProvider invalidRgbProvider
      * @param array $rgb
      */
     public function testRgb2HexFromInvalidValue(array $rgb)

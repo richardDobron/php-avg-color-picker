@@ -10,7 +10,7 @@ use Dobron\AvgColorPicker\Gd\Image;
 class GdImageUnitTest extends UnitTestCase
 {
     /**
-     * @dataProvider testInvalidMimeTypeImagePathProvider
+     * @dataProvider invalidMimeTypeImagePathProvider
      * @param string $path
      */
     public function testCreateFromInvalidImagePath(string $path)
@@ -21,19 +21,19 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testImageInvalidPathProvider
+     * @dataProvider imageInvalidPathProvider
      * @param string $path
      */
     public function testCreateFromImageInvalidPath(string $path)
     {
-        $this->expectException(\PHPUnit_Framework_Error_Warning::class);
+        $this->expectException(InvalidArgumentException::class);
 
         Image::createFromPath($path);
     }
 
     /**
-     * @dataProvider testInvalidImageResourceProvider
-     * @param resource $resource
+     * @dataProvider invalidImageResourceProvider
+     * @param \GdImage $resource
      */
     public function testCreateFromInvalidImageResource($resource)
     {
@@ -43,7 +43,7 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidImageProvider
+     * @dataProvider validImageProvider
      * @param $resource
      * @param string $path
      * @param int $width
@@ -58,7 +58,7 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidImageProvider
+     * @dataProvider validImageProvider
      * @param $resource
      * @param string $path
      * @param int $width
@@ -73,7 +73,7 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidImageProvider
+     * @dataProvider validImageProvider
      * @param $resource
      * @param string $path
      * @param int $width
@@ -88,7 +88,7 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidImageProvider
+     * @dataProvider validImageProvider
      * @param $resource
      * @param string $path
      * @param int $width
@@ -103,7 +103,7 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testValidImageProvider
+     * @dataProvider validImageProvider
      * @param $resource
      * @param string $path
      * @param int $width

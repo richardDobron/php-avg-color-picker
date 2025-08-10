@@ -72,7 +72,7 @@ class AvgColorPicker implements AvgColorPickerContract
      */
     public function getImageAvgHex($image): string
     {
-        return is_resource($image) ? $this->getImageAvgHexByResource($image) : $this->getImageAvgHexByPath($image);
+        return $image instanceof \GdImage ? $this->getImageAvgHexByResource($image) : $this->getImageAvgHexByPath($image);
     }
 
     /**
@@ -80,6 +80,6 @@ class AvgColorPicker implements AvgColorPickerContract
      */
     public function getImageAvgRgb($image): array
     {
-        return is_resource($image) ? $this->getImageAvgRgbByResource($image) : $this->getImageAvgRgbByPath($image);
+        return $image instanceof \GdImage ? $this->getImageAvgRgbByResource($image) : $this->getImageAvgRgbByPath($image);
     }
 }
