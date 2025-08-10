@@ -2,7 +2,7 @@
   "name": "richarddobron/php-avg-color-picker",
   "type": "library",
   "description": "The PHP Average Color Picker Library",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "keywords": [
     "php",
     "average",
