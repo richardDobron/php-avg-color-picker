@@ -98,6 +98,7 @@ class Image
             'image/png' => 'imagecreatefrompng',
             'image/jpeg' => 'imagecreatefromjpeg',
             'image/gif' => 'imagecreatefromgif',
+            'image/webp' => 'imagecreatefromwebp',
         ];
 
         $mimeType = mime_content_type($path);

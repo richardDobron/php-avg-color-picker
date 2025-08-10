@@ -60,13 +60,14 @@ abstract class UnitTestCase extends \PHPUnit\Framework\TestCase
                 'hex' => '#6d4635',
                 'rgb' => [109, 70, 53],
             ],
-        ];
-    }
-
-    public static function invalidImageResourceProvider(): array
-    {
-        return [
-            ['invalid_resource'],
+            [
+                'resource' => imagecreatefromwebp(__DIR__ . '/../samples/valid_image.webp'),
+                'path' => __DIR__ . '/../samples/valid_image.webp',
+                'width' => 400,
+                'height' => 225,
+                'hex' => '#6c4537',
+                'rgb' => [108, 69, 55],
+            ],
         ];
     }
 
