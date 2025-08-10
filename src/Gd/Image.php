@@ -1,16 +1,16 @@
 <?php
 
-namespace Tooleks\Php\AvgColorPicker\Gd;
+namespace Dobron\AvgColorPicker\Gd;
 
-use Tooleks\Php\AvgColorPicker\ColorConverter;
-use Tooleks\Php\AvgColorPicker\Exceptions\InvalidArgumentException;
-use Tooleks\Php\AvgColorPicker\Exceptions\InvalidImageDimensionException;
-use Tooleks\Php\AvgColorPicker\Exceptions\InvalidMimeTypeException;
+use Dobron\AvgColorPicker\ColorConverter;
+use Dobron\AvgColorPicker\Exceptions\InvalidArgumentException;
+use Dobron\AvgColorPicker\Exceptions\InvalidImageDimensionException;
+use Dobron\AvgColorPicker\Exceptions\InvalidMimeTypeException;
 
 /**
  * Class Image.
  *
- * @package Tooleks\Php\AvgColorPicker\Gd
+ * @package Dobron\AvgColorPicker\Gd
  * @author Oleksandr Tolochko <tooleks@gmail.com>
  */
 class Image

@@ -1,6 +1,6 @@
 <?php
 
-use Tooleks\Php\AvgColorPicker\Gd\AvgColorPicker;
+use Dobron\AvgColorPicker\Gd\AvgColorPicker;
 
 /**
  * Class GdAvgColorPickerUnitTest.

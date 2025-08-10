@@ -1,11 +1,11 @@
 <?php
 
-namespace Tooleks\Php\AvgColorPicker\Contracts;
+namespace Dobron\AvgColorPicker\Contracts;
 
 /**
  * Interface AvgColorPicker.
  *
- * @package Tooleks\Php\AvgColorPicker\Contracts
+ * @package Dobron\AvgColorPicker\Contracts
  * @author Oleksandr Tolochko <tooleks@gmail.com>
  */
 interface AvgColorPicker

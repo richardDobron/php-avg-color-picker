@@ -1,13 +1,13 @@
 <?php
 
-namespace Tooleks\Php\AvgColorPicker\Gd;
+namespace Dobron\AvgColorPicker\Gd;
 
-use Tooleks\Php\AvgColorPicker\Contracts\AvgColorPicker as AvgColorPickerContract;
+use Dobron\AvgColorPicker\Contracts\AvgColorPicker as AvgColorPickerContract;
 
 /**
  * Class AvgColorPicker.
  *
- * @package Tooleks\Php\AvgColorPicker\Gd
+ * @package Dobron\AvgColorPicker\Gd
  */
 class AvgColorPicker implements AvgColorPickerContract
 {

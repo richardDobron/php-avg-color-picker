@@ -1,8 +1,8 @@
 <?php
 
-use Tooleks\Php\AvgColorPicker\Exceptions\InvalidArgumentException;
-use Tooleks\Php\AvgColorPicker\Exceptions\InvalidMimeTypeException;
-use Tooleks\Php\AvgColorPicker\Gd\Image;
+use Dobron\AvgColorPicker\Exceptions\InvalidArgumentException;
+use Dobron\AvgColorPicker\Exceptions\InvalidMimeTypeException;
+use Dobron\AvgColorPicker\Gd\Image;
 
 /**
  * Class GdImageUnitTest.

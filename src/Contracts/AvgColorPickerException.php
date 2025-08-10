@@ -1,11 +1,11 @@
 <?php
 
-namespace Tooleks\Php\AvgColorPicker\Contracts;
+namespace Dobron\AvgColorPicker\Contracts;
 
 /**
  * Interface AvgColorPickerException.
  *
- * @package Tooleks\Php\AvgColorPicker\Contracts
+ * @package Dobron\AvgColorPicker\Contracts
  * @author Oleksandr Tolochko <tooleks@gmail.com>
  */
 interface AvgColorPickerException

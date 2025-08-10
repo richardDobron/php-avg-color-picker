@@ -1,13 +1,13 @@
 <?php
 
-namespace Tooleks\Php\AvgColorPicker;
+namespace Dobron\AvgColorPicker;
 
 use RuntimeException;
 
 /**
  * Class ColorConverter.
  *
- * @package Tooleks\Php\AvgColorPicker
+ * @package Dobron\AvgColorPicker
  * @author Oleksandr Tolochko <tooleks@gmail.com>
  */
 class ColorConverter

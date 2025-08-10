@@ -1,6 +1,6 @@
 <?php
 
-use Tooleks\Php\AvgColorPicker\ColorConverter;
+use Dobron\AvgColorPicker\ColorConverter;
 
 /**
  * Class ColorConverterUnitTest.
