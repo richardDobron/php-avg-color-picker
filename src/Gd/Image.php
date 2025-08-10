@@ -18,14 +18,14 @@ class Image
     /**
      * An image resource.
      *
-     * @var resource
+     * @var \GdImage
      */
-    protected $resource;
+    protected \GdImage $resource;
 
     /**
      * @var bool
      */
-    protected $cleanupOnDestruct;
+    protected bool $cleanupOnDestruct;
 
     /**
      * Image constructor.
@@ -33,7 +33,7 @@ class Image
      * @param \GdImage $resource
      * @param bool $cleanupOnDestruct
      */
-    protected function __construct($resource, bool $cleanupOnDestruct = true)
+    protected function __construct(\GdImage $resource, bool $cleanupOnDestruct = true)
     {
         $this->assertResource($resource);
 
@@ -54,9 +54,9 @@ class Image
     /**
      * Assert an image resource.
      *
-     * @param $resource
+     * @param \GdImage $resource
      */
-    protected function assertResource($resource)
+    protected function assertResource(\GdImage $resource): void
     {
         if (!$resource instanceof \GdImage) {
             throw new InvalidArgumentException('Invalid resource type.');
@@ -77,7 +77,7 @@ class Image
      * @param \GdImage $resource
      * @return $this
      */
-    public static function createFromResource($resource)
+    public static function createFromResource(\GdImage $resource): static
     {
         return new static($resource, false);
     }

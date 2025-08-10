@@ -32,7 +32,7 @@ interface AvgColorPicker
      * @param \GdImage $imageResource
      * @return string
      */
-    public function getImageAvgHexByResource($imageResource): string;
+    public function getImageAvgHexByResource(\GdImage $imageResource): string;
 
     /**
      * Get average color of the image by its resource in RGB format.
@@ -40,7 +40,7 @@ interface AvgColorPicker
      * @param \GdImage $imageResource
      * @return array
      */
-    public function getImageAvgRgbByResource($imageResource): array;
+    public function getImageAvgRgbByResource(\GdImage $imageResource): array;
 
     /**
      * Get average color of the image by its resource or path in HEX format.
@@ -48,7 +48,7 @@ interface AvgColorPicker
      * @param \GdImage|string $image
      * @return string
      */
-    public function getImageAvgHex($image): string;
+    public function getImageAvgHex(\GdImage|string $image): string;
 
     /**
      * Get average color of the image by its resource or path in RGB format.
@@ -56,5 +56,5 @@ interface AvgColorPicker
      * @param \GdImage|string $image
      * @return array
      */
-    public function getImageAvgRgb($image): array;
+    public function getImageAvgRgb(\GdImage|string $image): array;
 }

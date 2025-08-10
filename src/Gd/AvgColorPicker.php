@@ -42,7 +42,7 @@ class AvgColorPicker implements AvgColorPickerContract
     /**
      * @inheritdoc
      */
-    public function getImageAvgHexByResource($imageResource): string
+    public function getImageAvgHexByResource(\GdImage $imageResource): string
     {
         $image = Image::createFromResource($imageResource);
 
@@ -56,7 +56,7 @@ class AvgColorPicker implements AvgColorPickerContract
     /**
      * @inheritdoc
      */
-    public function getImageAvgRgbByResource($imageResource): array
+    public function getImageAvgRgbByResource(\GdImage $imageResource): array
     {
         $image = Image::createFromResource($imageResource);
 
@@ -70,7 +70,7 @@ class AvgColorPicker implements AvgColorPickerContract
     /**
      * @inheritdoc
      */
-    public function getImageAvgHex($image): string
+    public function getImageAvgHex(\GdImage|string $image): string
     {
         return $image instanceof \GdImage ? $this->getImageAvgHexByResource($image) : $this->getImageAvgHexByPath($image);
     }
@@ -78,7 +78,7 @@ class AvgColorPicker implements AvgColorPickerContract
     /**
      * @inheritdoc
      */
-    public function getImageAvgRgb($image): array
+    public function getImageAvgRgb(\GdImage|string $image): array
     {
         return $image instanceof \GdImage ? $this->getImageAvgRgbByResource($image) : $this->getImageAvgRgbByPath($image);
     }

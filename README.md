@@ -9,7 +9,7 @@
 ## 📖 Requirements
 * PHP 7.0 or higher
 * [Composer](https://getcomposer.org) is required for installation
-* PHP Extensions: `ext-mbstring`, `ext-gd`
+* PHP Extensions: `ext-mbstring`, `ext-gd`, `ext-fileinfo`, `ext-ctype`
 
 ## 📦 Installation
 

@@ -39,7 +39,7 @@ class ColorConverter
      * @return void
      * @throws RuntimeException
      */
-    public function assertHex(string $hex)
+    public function assertHex(string $hex): void
     {
         // Assert HEX value length.
         if (mb_strlen($hex) !== 7) {
@@ -84,7 +84,7 @@ class ColorConverter
      * @return void
      * @throws RuntimeException
      */
-    public function assertRgb(array $rgb)
+    public function assertRgb(array $rgb): void
     {
         // Assert RGB values count.
         if (count($rgb) !== 3) {

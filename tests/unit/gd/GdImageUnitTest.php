@@ -32,26 +32,15 @@ class GdImageUnitTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider invalidImageResourceProvider
-     * @param \GdImage $resource
-     */
-    public function testCreateFromInvalidImageResource($resource)
-    {
-        $this->expectException(InvalidArgumentException::class);
-
-        Image::createFromResource($resource);
-    }
-
-    /**
      * @dataProvider validImageProvider
-     * @param $resource
+     * @param \GdImage $resource
      * @param string $path
      * @param int $width
      * @param int $height
      * @param string $hex
      * @param array $rgb
      */
-    public function testCreateFromValidImage($resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testCreateFromValidImage(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
         $this->assertInstanceOf(Image::class, Image::createFromPath($path));
         $this->assertInstanceOf(Image::class, Image::createFromResource($resource));
@@ -59,14 +48,14 @@ class GdImageUnitTest extends UnitTestCase
 
     /**
      * @dataProvider validImageProvider
-     * @param $resource
+     * @param \GdImage $resource
      * @param string $path
      * @param int $width
      * @param int $height
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageWidth($resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageWidth(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
         $this->assertEquals($width, Image::createFromPath($path)->getWidth());
         $this->assertEquals($width, Image::createFromResource($resource)->getWidth());
@@ -74,14 +63,14 @@ class GdImageUnitTest extends UnitTestCase
 
     /**
      * @dataProvider validImageProvider
-     * @param $resource
+     * @param \GdImage $resource
      * @param string $path
      * @param int $width
      * @param int $height
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageHeight($resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageHeight(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
         $this->assertEquals($height, Image::createFromPath($path)->getHeight());
         $this->assertEquals($height, Image::createFromResource($resource)->getHeight());
@@ -89,14 +78,14 @@ class GdImageUnitTest extends UnitTestCase
 
     /**
      * @dataProvider validImageProvider
-     * @param $resource
+     * @param \GdImage $resource
      * @param string $path
      * @param int $width
      * @param int $height
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageAvgHex($resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageAvgHex(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
         $this->assertEquals($hex, Image::createFromPath($path)->getAvgHex());
         $this->assertEquals($hex, Image::createFromResource($resource)->getAvgHex());
@@ -104,14 +93,14 @@ class GdImageUnitTest extends UnitTestCase
 
     /**
      * @dataProvider validImageProvider
-     * @param $resource
+     * @param \GdImage $resource
      * @param string $path
      * @param int $width
      * @param int $height
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageAvgRgb($resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageAvgRgb(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
         $this->assertEquals($rgb, Image::createFromPath($path)->getAvgRgb());
         $this->assertEquals($rgb, Image::createFromResource($resource)->getAvgRgb());
