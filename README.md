@@ -38,13 +38,9 @@ Here’s how to use the library to determine the average color of an image:
 
 use Dobron\AvgColorPicker\Gd\AvgColorPicker;
 
-$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgbByPath($imagePath);
+$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgb('image.png');
 // or
-$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgbByResource($gdImageResource);
-// or
-$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgb($imagePath);
-// or
-$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgb($gdImageResource);
+$imageAvgRgbColor = (new AvgColorPicker)->getImageAvgRgb(imagecreatefrompng('image.png'));
 
 var_dump($imageAvgRgbColor); // array(255, 255, 255)
 ```
@@ -54,13 +50,9 @@ var_dump($imageAvgRgbColor); // array(255, 255, 255)
 
 use Dobron\AvgColorPicker\Gd\AvgColorPicker;
 
-$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHexByPath($imagePath);
+$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHex('image.gif');
 // or
-$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHexByResource($gdImageResource);
-// or
-$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHex($imagePath);
-// or
-$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHex($gdImageResource);
+$imageAvgHexColor = (new AvgColorPicker)->getImageAvgHex(imagecreatefromgif('image.gif'));
 
 var_dump($imageAvgHexColor); // string(7) "#ffffff"
 ```
