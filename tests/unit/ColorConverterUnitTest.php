@@ -14,7 +14,7 @@ class ColorConverterUnitTest extends UnitTestCase
      */
     public function testHex2Rgb(string $hex, array $rgb)
     {
-        $this->assertEquals($rgb, (new ColorConverter)->hex2rgb($hex));
+        $this->assertEquals($rgb, (new ColorConverter())->hex2rgb($hex));
     }
 
     /**
@@ -24,7 +24,7 @@ class ColorConverterUnitTest extends UnitTestCase
      */
     public function testRgb2Hex(string $hex, array $rgb)
     {
-        $this->assertEquals($hex, (new ColorConverter)->rgb2hex($rgb));
+        $this->assertEquals($hex, (new ColorConverter())->rgb2hex($rgb));
     }
 
     /**
@@ -35,7 +35,7 @@ class ColorConverterUnitTest extends UnitTestCase
     {
         $this->expectException(\RuntimeException::class);
 
-        (new ColorConverter)->hex2rgb($hex);
+        (new ColorConverter())->hex2rgb($hex);
     }
 
     /**
@@ -46,6 +46,6 @@ class ColorConverterUnitTest extends UnitTestCase
     {
         $this->expectException(\RuntimeException::class);
 
-        (new ColorConverter)->rgb2hex($rgb);
+        (new ColorConverter())->rgb2hex($rgb);
     }
 }

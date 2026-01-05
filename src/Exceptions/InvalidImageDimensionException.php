@@ -12,5 +12,4 @@ use Dobron\AvgColorPicker\Contracts\AvgColorPickerException;
  */
 class InvalidImageDimensionException extends \RuntimeException implements AvgColorPickerException
 {
-
 }

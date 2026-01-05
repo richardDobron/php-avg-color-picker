@@ -53,7 +53,7 @@ class ColorConverter
 
         for ($i = 1; $i < mb_strlen($hex); $i++) {
             // Assert HEX digit value.
-            if (!ctype_xdigit($hex[$i])) {
+            if (! ctype_xdigit($hex[$i])) {
                 throw new RuntimeException(sprintf('Invalid HEX value %s.', $hex));
             }
         }

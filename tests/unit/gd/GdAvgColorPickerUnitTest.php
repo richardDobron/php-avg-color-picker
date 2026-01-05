@@ -18,11 +18,11 @@ class GdAvgColorPickerUnitTest extends UnitTestCase
      */
     public function testGetImageAvgHex(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
-        $this->assertEquals($hex, (new AvgColorPicker)->getImageAvgHexByPath($path));
-        $this->assertEquals($hex, (new AvgColorPicker)->getImageAvgHex($path));
+        $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHexByPath($path));
+        $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHex($path));
 
-        $this->assertEquals($hex, (new AvgColorPicker)->getImageAvgHexByResource($resource));
-        $this->assertEquals($hex, (new AvgColorPicker)->getImageAvgHex($resource));
+        $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHexByResource($resource));
+        $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHex($resource));
     }
 
     /**
@@ -36,10 +36,10 @@ class GdAvgColorPickerUnitTest extends UnitTestCase
      */
     public function testGetImageAvgRgb(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
     {
-        $this->assertEquals($rgb, (new AvgColorPicker)->getImageAvgRgbByPath($path));
-        $this->assertEquals($rgb, (new AvgColorPicker)->getImageAvgRgb($path));
+        $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgbByPath($path));
+        $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgb($path));
 
-        $this->assertEquals($rgb, (new AvgColorPicker)->getImageAvgRgbByResource($resource));
-        $this->assertEquals($rgb, (new AvgColorPicker)->getImageAvgRgb($resource));
+        $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgbByResource($resource));
+        $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgb($resource));
     }
 }

@@ -12,5 +12,4 @@ use Dobron\AvgColorPicker\Contracts\AvgColorPickerException;
  */
 class InvalidArgumentException extends \InvalidArgumentException implements AvgColorPickerException
 {
-
 }

@@ -12,5 +12,4 @@ use Dobron\AvgColorPicker\Contracts\AvgColorPickerException;
  */
 class InvalidMimeTypeException extends \RuntimeException implements AvgColorPickerException
 {
-
 }

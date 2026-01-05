@@ -10,5 +10,4 @@ namespace Dobron\AvgColorPicker\Contracts;
  */
 interface AvgColorPickerException
 {
-
 }

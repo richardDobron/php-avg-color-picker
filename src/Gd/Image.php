@@ -58,7 +58,7 @@ class Image
      */
     protected function assertResource(\GdImage $resource): void
     {
-        if (!$resource instanceof \GdImage) {
+        if (! $resource instanceof \GdImage) {
             throw new InvalidArgumentException('Invalid resource type.');
         }
 
@@ -90,7 +90,7 @@ class Image
      */
     public static function createFromPath(string $path): static
     {
-        if (!is_file($path)) {
+        if (! is_file($path)) {
             throw new InvalidArgumentException("File does not exist: $path");
         }
 
@@ -103,7 +103,7 @@ class Image
 
         $mimeType = mime_content_type($path);
 
-        if (!array_key_exists($mimeType, $createFunctions)) {
+        if (! array_key_exists($mimeType, $createFunctions)) {
             throw new InvalidMimeTypeException(sprintf('The "%s" mime type is not supported.', $mimeType));
         }
 
@@ -157,6 +157,6 @@ class Image
     {
         $rgb = $this->getAvgRgb();
 
-        return (new ColorConverter)->rgb2hex($rgb);
+        return (new ColorConverter())->rgb2hex($rgb);
     }
 }
