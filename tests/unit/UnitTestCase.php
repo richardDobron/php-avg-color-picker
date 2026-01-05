@@ -1,5 +1,7 @@
 <?php
 
+namespace Dobron\AvgColorPicker\Tests\unit;
+
 /**
  * Class UnitTestCase.
  */

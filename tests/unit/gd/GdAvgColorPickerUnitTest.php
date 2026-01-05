@@ -1,6 +1,9 @@
 <?php
 
+namespace Dobron\AvgColorPicker\Tests\unit\gd;
+
 use Dobron\AvgColorPicker\Gd\AvgColorPicker;
+use Dobron\AvgColorPicker\Tests\unit\UnitTestCase;
 
 /**
  * Class GdAvgColorPickerUnitTest.
@@ -16,7 +19,7 @@ class GdAvgColorPickerUnitTest extends UnitTestCase
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageAvgHex(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageAvgHex(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb): void
     {
         $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHexByPath($path));
         $this->assertEquals($hex, (new AvgColorPicker())->getImageAvgHex($path));
@@ -34,7 +37,7 @@ class GdAvgColorPickerUnitTest extends UnitTestCase
      * @param string $hex
      * @param array $rgb
      */
-    public function testGetImageAvgRgb(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb)
+    public function testGetImageAvgRgb(\GdImage $resource, string $path, int $width, int $height, string $hex, array $rgb): void
     {
         $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgbByPath($path));
         $this->assertEquals($rgb, (new AvgColorPicker())->getImageAvgRgb($path));

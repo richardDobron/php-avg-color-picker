@@ -39,8 +39,8 @@
   "scripts": {
     "post-merge": "composer install",
     "tests": "@php vendor/bin/phpunit --colors=always --testdox",
-    "fix-style": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
-    "check-style": "vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run"
+    "fix-style": "@php vendor/bin/php-cs-fixer fix --allow-risky=yes",
+    "check-style": "@php vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run"
   },
   "scripts-descriptions": {
     "tests": "Run all tests."
@@ -51,6 +51,9 @@
     }
   },
   "autoload-dev": {
+    "psr-4": {
+      "Dobron\\AvgColorPicker\\Tests\\": "tests/"
+    },
     "classmap": [
       "tests"
     ]

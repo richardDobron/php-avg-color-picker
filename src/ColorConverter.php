@@ -20,7 +20,7 @@ class ColorConverter
      * Note: The method accepts only fully specified HEX values (Example: #000000).
      *
      * @param string $hex
-     * @return array
+     * @return array{0: int, 1: int, 2: int}
      * @throws RuntimeException
      */
     public function hex2rgb(string $hex): array
@@ -64,7 +64,7 @@ class ColorConverter
      *
      * Example: RGB (array) [0, 0, 0] -> HEX (string) #000000
      *
-     * @param array $rgb
+     * @param array{0: int, 1: int, 2: int} $rgb
      * @return string
      * @throws RuntimeException
      */
@@ -72,7 +72,7 @@ class ColorConverter
     {
         $this->assertRgb($rgb);
 
-        list($red, $green, $blue) = $rgb;
+        [$red, $green, $blue] = $rgb;
 
         return sprintf('#%02x%02x%02x', $red, $green, $blue);
     }
@@ -80,7 +80,7 @@ class ColorConverter
     /**
      * Assert RGB format.
      *
-     * @param array $rgb
+     * @param array{0: int, 1: int, 2: int} $rgb
      * @return void
      * @throws RuntimeException
      */

@@ -66,7 +66,7 @@ class Image
         $height = imagesy($resource);
         if ($width < 1 || $height < 1) {
             throw new InvalidImageDimensionException(
-                sprintf('The resource image dimensions should be at least 1x1px. The resource image with %sx%spx dimensions given.', $width, $height)
+                'The resource image dimensions should be at least 1x1px.'
             );
         }
     }
@@ -135,11 +135,15 @@ class Image
     /**
      * Get an image average color in RGB [255, 255, 255] format.
      *
-     * @return array
+     * @return array{0: int, 1: int, 2: int}
      */
     public function getAvgRgb(): array
     {
         $resource = imagescale($this->resource, 1, 1);
+
+        if ($resource === false) {
+            throw new InvalidImageDimensionException('Failed to scale image to 1x1 pixel.');
+        }
 
         $rgba = imagecolorsforindex($resource, imagecolorat($resource, 0, 0));
 

@@ -22,7 +22,7 @@ interface AvgColorPicker
      * Get average color of the image by its path in RGB format.
      *
      * @param string $imagePath
-     * @return array
+     * @return array{0: int, 1: int, 2: int}
      */
     public function getImageAvgRgbByPath(string $imagePath): array;
 
@@ -38,7 +38,7 @@ interface AvgColorPicker
      * Get average color of the image by its resource in RGB format.
      *
      * @param \GdImage $imageResource
-     * @return array
+     * @return array{0: int, 1: int, 2: int}
      */
     public function getImageAvgRgbByResource(\GdImage $imageResource): array;
 
@@ -54,7 +54,7 @@ interface AvgColorPicker
      * Get average color of the image by its resource or path in RGB format.
      *
      * @param \GdImage|string $image
-     * @return array
+     * @return array{0: int, 1: int, 2: int}
      */
     public function getImageAvgRgb(\GdImage|string $image): array;
 }

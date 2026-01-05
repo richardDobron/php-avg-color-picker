@@ -1,5 +1,7 @@
 <?php
 
+namespace Dobron\AvgColorPicker\Tests\unit;
+
 use Dobron\AvgColorPicker\ColorConverter;
 
 /**
@@ -12,7 +14,7 @@ class ColorConverterUnitTest extends UnitTestCase
      * @param string $hex
      * @param array $rgb
      */
-    public function testHex2Rgb(string $hex, array $rgb)
+    public function testHex2Rgb(string $hex, array $rgb): void
     {
         $this->assertEquals($rgb, (new ColorConverter())->hex2rgb($hex));
     }
@@ -22,7 +24,7 @@ class ColorConverterUnitTest extends UnitTestCase
      * @param string $hex
      * @param array $rgb
      */
-    public function testRgb2Hex(string $hex, array $rgb)
+    public function testRgb2Hex(string $hex, array $rgb): void
     {
         $this->assertEquals($hex, (new ColorConverter())->rgb2hex($rgb));
     }
@@ -31,7 +33,7 @@ class ColorConverterUnitTest extends UnitTestCase
      * @dataProvider invalidHexProvider
      * @param string $hex
      */
-    public function testHex2RgbFromInvalidValue(string $hex)
+    public function testHex2RgbFromInvalidValue(string $hex): void
     {
         $this->expectException(\RuntimeException::class);
 
@@ -42,7 +44,7 @@ class ColorConverterUnitTest extends UnitTestCase
      * @dataProvider invalidRgbProvider
      * @param array $rgb
      */
-    public function testRgb2HexFromInvalidValue(array $rgb)
+    public function testRgb2HexFromInvalidValue(array $rgb): void
     {
         $this->expectException(\RuntimeException::class);
 
